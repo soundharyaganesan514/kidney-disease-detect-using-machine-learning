@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict</title>
+    <link rel="stylesheet" href="home.html">
+    <style>
+        body{
+            background-image: url("https://wallpaperaccess.com/full/5917783.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            width: 100%;
+        }
+        .header{
+            top: 0;
+            width: 100%;
+            height: 90px;
+            font-family: 'Balsamiq Sans',cursive;
+            font-size: 25px;
+            font-weight: 800px;
+            text-align: center;
+        }
+        .MAIN p,label{
+            font-size: 20px;
+            margin-left: 20px;
+            font-family: 'Balsamiq Sans',cursive;
+        }
+        .MAIN input,select{
+            height: 30px;
+            width: 200px;
+        }
+        .MAIN button{
+            height: 30px;
+            width: 200px;
+            margin-left: 60px;
+            background-color: #daa520;
+        }
+        .MAIN b{
+            font-size: 20px;
+            font-weight: 800px;
+            text-align: center;
+            font-family: 'Balsamiq Sans',cursive;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>CHRONIC KIDNEY DISEASE PREDICTION</h1>
+        </div>
+        <div class="MAIN">
+            <form action="http://localhost:5000/Prediction" method="post">
+                <p> Enter Your Blood Urea Level<span><input type="text" name="urea level"/></span></p>
+                <p> Enter Your Blood Glucose Random<span><input type="text" name="month"/></span></p>
+                
+                <label for="anemia or not">select Anemia OR Not</label>
+                <select name="anemia or not">
+                    <option value="1">Yes</option>
+                    <option value="0">no</option>
+                    
+                </select>
+                <br><br>
+                <label for="coronary artery disease or not">select Coronary Artery Disease OR Not</label>
+                <select name="coronary artery disease or not">
+                    <option value="1">Yes</option>
+                    <option value="0">no</option>
+                    
+                </select>
+                <br><br>
+                <label for="pus cell ">Select Pus_Cell Level</label>
+                <select name="pus cell ">
+                    <option value="0">NORMAL</option>
+                    <option value="1">ABNORMAL</option>
+                </select>
+                <br><br>
+                <label for="red blood cell level">Select Red_Blood_Cell_Level </label>
+                <select name="red blood cell level">
+                    <option value="0">NORMAL</option>
+                    <option value="1">ABNORMAL</option>
+
+                    
+                </select>
+                <br><br>
+                <label for=" diabetesmellitus or not">Enter Diabetesmellitus OR Not</label>
+                <select name="diabetesmellitus or not">
+                    <option value="1">YES</option>
+                    <option value="0">NO</option>
+
+                </select>
+                <br><br>
+                <label for="pedal_edema or not">Enter Pedal_edema OR Not</label>
+                <select name="pedal_edema or not">
+                    <option value="0">YES</option>
+                    <option value="1">NO</option>
+                    
+                </select>
+                <br>
+                <br>
+                <br>
+                <div class="form-btn">
+                    <button  href="result.html"class="predict-btn" >Predict</button>
+                </div>
+            </form>
+        </div>
+</body>
+</html>
